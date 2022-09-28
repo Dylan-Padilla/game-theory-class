@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Game Theory                                </title>
+    <meta charset="utf-8" />
+    <meta name="author" content="            Dylan Padilla   Fall, 2022     dpadil10@asu.edu     https://dylanpadilla.netlify.app/     " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/tone/Tone.js"></script>
+    <script src="libs/slide-tone/slide-tone.js"></script>
+    <link rel="stylesheet" href="default.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Game Theory                                
+]
+.author[
+### <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> Dylan Padilla <br/> Fall, 2022 <br /> <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:skyblue;height:1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg> <a href="mailto:dpadil10@asu.edu" class="email">dpadil10@asu.edu</a> <br /> <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:skyblue;height:1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg> <a href="https://dylanpadilla.netlify.app/" class="uri">https://dylanpadilla.netlify.app/</a> <br /><br /><br /><br />
+]
+
+---
+
+
+
+
+
+
+
+
+
+# Announcements
+
+&lt;br/&gt;&lt;br/&gt;
+
+- For questions on grading or any other topic related to the class, let's make use of office hours.
+
+- The recording of the lectures are posted on canvas 24 h after class
+
+- The recording of recitations together with the slides are also posted on canvas
+
+
+---
+
+# Outline
+
+&lt;br/&gt;&lt;br/&gt;
+
+- What game theory is and how/why it is applied to biology
+
+--
+
+- Evolutionarily stable strategies (ESS) and frequency dependent selection
+
+--
+
+- Examples
+
+---
+
+# Netlogo Model of Hawk-Dove Games
+
+&lt;br/&gt;&lt;br/&gt;
+
+- Download NetLogo from [here](https://ccl.northwestern.edu/netlogo/6.2.0/). NetLogo does have an HTML format but this model is too outdated to be used on it
+
+
+- Download the Hawk - Dove model [here](https://drive.google.com/file/d/1_OowptjexVBiWE0FBsq8pH82uI0dBjEd/view?usp=sharing)
+
+
+---
+
+# Game Theory
+
+&lt;br/&gt;&lt;br/&gt;
+
+- Game Theory is the study of mathematical models of conflict and cooperation
+
+--
+
+
+- Forms the basis of many economic theories, war strategies, sociological theories, and even board games
+
+--
+
+
+- John Maynard Smith emphasized the potential for its use in behavioral ecology
+
+---
+
+
+# Evolutionary Game Theory
+
+
+Evolutionary game theory focuses more on dynamics of strategy change. Influenced by the frequency of the competing strategies in the population
+
+&lt;center&gt;
+
+.pull-left[
+
+&lt;img src = "img/book.png" height = 300px, width = 200px&gt;
+
+]
+
+.pull-right[
+
+![](img/maynard.jpeg)
+
+]
+
+&lt;/center&gt;
+
+
+---
+
+# Behavioral polymorphism
+
+- Two or more morphs in a population or species
+
+- Constant competition/cooperation between them
+
+&lt;center&gt;
+
+.pull-left[
+
+![](https://cdn.kqed.org/wp-content/uploads/sites/35/2016/05/DL309-Lizards-three-colors-in-hand.jpg)
+
+]
+
+.pull-right[
+
+![](https://cdn.kqed.org/wp-content/uploads/sites/35/2016/05/DL312_Lizards_RockPaperScissors_500.gif)
+
+]
+
+&lt;/center&gt;
+
+---
+
+# Game theory simplified
+
+
+- Individual players make decisions
+
+--
+
+- These decisions influence the behavior of other individuals
+
+--
+
+- The strategy of each individual will depend in part by the strategies of the other players
+
+
+&lt;center&gt;
+
+![](img/monopoly.jpeg)
+
+---
+
+
+# Evolutionary game theory models
+
+.pull-left[
+
+&lt;img src = "img/prisonersdilemma.png" width = 500px, height = 500px&gt;
+
+]
+
+.pull-right[
+
+&lt;span style='color: orange;'&gt;Dylan&lt;/span&gt; and &lt;span style='color: skyblue;'&gt;Katy&lt;/span&gt; were arrested the same day!
+
+- 2 years for drug
+
+- If confess, 1 year and the other 10 years
+
+- If deny, 10 year and the other 1 years
+
+- If both confess, both get 3 years
+
+]
+
+
+---
+
+
+# Evolutionary game theory models
+
+.pull-left[
+
+&lt;img src = "img/prisonersdilemma.png" width = 500px, height = 500px&gt;
+
+]
+
+
+.pull-right[
+
+&lt;span style='color: orange;'&gt;Dylan&lt;/span&gt; and &lt;span style='color: skyblue;'&gt;Katy&lt;/span&gt; were arrested the same day!
+
+- 2 years for drug
+
+- If confess, 1 year and the other 10 years
+
+- If deny, 10 year and the other 1 years
+
+- If both confess, both get 3 years
+
+&lt;br&gt;
+
+# &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style='color: skyblue;'&gt;Payoff Matrix&lt;/span&gt;
+
+
+]
+
+
+---
+
+# The prisioner's dilemma
+
+
+.pull-left[
+
+&lt;span style='color: orange;'&gt;Dylan&lt;/span&gt; and &lt;span style='color: skyblue;'&gt;Katy&lt;/span&gt; were arrested the same day!
+
+- 2 years for drug
+
+- If confess, 1 year and the other 10 years
+
+- If deny, 10 year and the other 1 years
+
+- If both confess, both get 3 years
+
+&lt;br&gt;
+
+# &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style='color: skyblue;'&gt;Payoff Matrix&lt;/span&gt;
+
+]
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-1-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+
+# The prisioner's dilemma
+
+
+.pull-left[
+
+&lt;span style='color: orange;'&gt;Dylan&lt;/span&gt; and &lt;span style='color: skyblue;'&gt;Katy&lt;/span&gt; were arrested the same day!
+
+- 2 years for drug
+
+- If confess, 1 year and the other 10 years
+
+- If deny, 10 year and the other 1 years
+
+- If both confess, both get 3 years
+
+&lt;br&gt;
+
+# &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style='color: skyblue;'&gt;Payoff Matrix&lt;/span&gt;
+
+]
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-2-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# The prisioner's dilemma
+
+
+.pull-left[
+
+&lt;span style='color: orange;'&gt;Dylan&lt;/span&gt; and &lt;span style='color: skyblue;'&gt;Katy&lt;/span&gt; were arrested the same day!
+
+- 2 years for drug
+
+- If confess, 1 year and the other 10 years
+
+- If deny, 10 year and the other 1 years
+
+- If both confess, both get 3 years
+
+&lt;br&gt;
+
+# &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style='color: skyblue;'&gt;Payoff Matrix&lt;/span&gt;
+
+]
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# The prisioner's dilemma
+
+
+.pull-left[
+
+&lt;span style='color: orange;'&gt;Dylan&lt;/span&gt; and &lt;span style='color: skyblue;'&gt;Katy&lt;/span&gt; were arrested the same day!
+
+- 2 years for drug
+
+- If confess, 1 year and the other 10 years
+
+- If deny, 10 year and the other 1 years
+
+- If both confess, both get 3 years
+
+&lt;br&gt;
+
+# &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style='color: skyblue;'&gt;Payoff Matrix&lt;/span&gt;
+
+]
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# The prisioner's dilemma
+
+
+.pull-left[
+
+&lt;span style='color: orange;'&gt;Dylan&lt;/span&gt; and &lt;span style='color: skyblue;'&gt;Katy&lt;/span&gt; were arrested the same day!
+
+- 2 years for drug
+
+- If confess, 1 year and the other 10 years
+
+- If deny, 10 year and the other 1 years
+
+- If both confess, both get 3 years
+
+&lt;br&gt;
+
+# &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style='color: skyblue;'&gt;Payoff Matrix&lt;/span&gt;
+
+]
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# The prisioner's dilemma
+
+
+.pull-left[
+
+&lt;span style='color: orange;'&gt;Dylan&lt;/span&gt; and &lt;span style='color: skyblue;'&gt;Katy&lt;/span&gt; were arrested the same day!
+
+- 2 years for drug
+
+- If confess, 1 year and the other 10 years
+
+- If deny, 10 year and the other 1 years
+
+- If both confess, both get 3 years
+
+&lt;br&gt;
+
+# &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style='color: skyblue;'&gt;Nash Equilibrium&lt;/span&gt;
+
+]
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Hawk-Dove game
+
+&lt;center&gt;
+
+.pull-left[
+
+
+&lt;img src = "img/hawk.gif" width = 200px, height = 200px&gt;
+
+&lt;img src = "img/dove.gif" width = 300px, height = 200px&gt;
+
+
+]
+
+&lt;/center&gt;
+
+.pull-right[
+
+1. Two competing organisms exploit the same resource
+
+2. Competition is by displays (dove strategy) or fights (hawk strategy)
+
+3. &lt;span style='color: orange;'&gt;Hawks always beat doves in competition&lt;/span&gt;
+
+4. &lt;span style='color: orange;'&gt;When hawks meet hawks or doves meet doves, they get half of the resource&lt;/span&gt;
+
+Payoffs:
+
+- get resources: +50
+- lose resources: 0
+- lose fight (injury): -100
+- cost of dove display: -10
+
+]
+
+---
+
+# What is the best strategy? &lt;span style='color: orange;'&gt;Hawk&lt;/span&gt; or &lt;span style='color: skyblue;'&gt;Dove&lt;/span&gt;?
+
+&lt;center&gt;
+
+.pull-left[
+
+
+`\(V=50\)`
+
+`\(C=-100\)`
+
+&lt;br&gt;
+
+![](img/surprised.gif)
+
+
+]
+
+&lt;/center&gt;
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+
+
+# What is the best strategy? &lt;span style='color: orange;'&gt;Hawk&lt;/span&gt; or &lt;span style='color: skyblue;'&gt;Dove&lt;/span&gt;?
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-8-1.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+# What is the best strategy? &lt;span style='color: orange;'&gt;Hawk&lt;/span&gt; or &lt;span style='color: skyblue;'&gt;Dove&lt;/span&gt;?
+
+
+.pull-left[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+The best strategy dependes on the frequency of other strategies
+
+&lt;span style='color: orange;'&gt;Hawks&lt;/span&gt;:
+
+- Better than doves when may doves
+- Worse than doves when many hawks
+
+&lt;span style='color: skyblue;'&gt;Doves&lt;/span&gt;:
+
+- Better than hawks when many hawks
+- Worse than hawks when many doves
+
+]
+
+---
+
+# What is the best strategy? &lt;span style='color: orange;'&gt;Hawk&lt;/span&gt; or &lt;span style='color: skyblue;'&gt;Dove&lt;/span&gt;?
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-10-1.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Modeling the dynamic of the population
+
+.pull-left[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-11-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-12-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+- There is an equilibrium hawk frequency, adding individuals of each strategy lowers fitness relative to the alternative strategy
+
+- No best "pure" strategy, no &lt;span style='color: orange;'&gt;Evolutionary Stable Strategy&lt;/span&gt;
+
+- Fitness for strategies are **frequency dependant**
+
+
+]
+
+---
+
+# Modeling the dynamic of the population
+
+.pull-left[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-13-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-14-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+- There is an equilibrium hawk frequency, adding individuals of each strategy lowers fitness relative to the alternative strategy
+
+- No best "pure" strategy, no &lt;span style='color: orange;'&gt;Evolutionary Stable Strategy&lt;/span&gt;
+
+- Fitness for strategies are **frequency dependant**
+
+
+]
+
+
+---
+
+# Modeling the dynamic of the population
+
+.pull-left[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-15-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+.pull-right[
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-16-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+- The fitness of individuals in lower at equilibrium than in all dove population
+
+- Individual selection &gt; group selection
+
+- &lt;span style='color: orange;'&gt;Selection acts to lower the population mean fitness&lt;/span&gt;
+
+]
+
+
+---
+
+# Time for Netlogo
+
+&lt;img src = "img/netlogo.png" width = 800px, height = 500px&gt;
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"slideNumberFormat": "%current%",
+"highlightStyle": "ir-black",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
