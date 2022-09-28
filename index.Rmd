@@ -180,11 +180,11 @@ Evolutionary game theory focuses more on dynamics of strategy change. Influenced
 
 `r colorize("Dylan", "orange")` and `r colorize("Katy", "skyblue")` were arrested the same day!
 
-- 2 years for drug
+- 2 years for drugs
 
 - If confess, 1 year and the other 10 years
 
-- If deny, 10 year and the other 1 years
+- If deny, 10 years and the other 1 year
 
 - If both confess, both get 3 years
 
@@ -207,11 +207,11 @@ Evolutionary game theory focuses more on dynamics of strategy change. Influenced
 
 `r colorize("Dylan", "orange")` and `r colorize("Katy", "skyblue")` were arrested the same day!
 
-- 2 years for drug
+- 2 years for drugs
 
 - If confess, 1 year and the other 10 years
 
-- If deny, 10 year and the other 1 years
+- If deny, 10 years and the other 1 year
 
 - If both confess, both get 3 years
 
@@ -232,11 +232,11 @@ Evolutionary game theory focuses more on dynamics of strategy change. Influenced
 
 `r colorize("Dylan", "orange")` and `r colorize("Katy", "skyblue")` were arrested the same day!
 
-- 2 years for drug
+- 2 years for drugs
 
 - If confess, 1 year and the other 10 years
 
-- If deny, 10 year and the other 1 years
+- If deny, 10 years and the other 1 year
 
 - If both confess, both get 3 years
 
@@ -277,11 +277,11 @@ mtext(text = "Deny", side = 3, at = 0.5, line = 2, cex = 2, col = "orange", font
 
 `r colorize("Dylan", "orange")` and `r colorize("Katy", "skyblue")` were arrested the same day!
 
-- 2 years for drug
+- 2 years for drugs
 
 - If confess, 1 year and the other 10 years
 
-- If deny, 10 year and the other 1 years
+- If deny, 10 years and the other 1 year
 
 - If both confess, both get 3 years
 
@@ -325,11 +325,11 @@ text(x = -0.75, y = 1.25, "3", col = "skyblue", font = 2, cex = 3)
 
 `r colorize("Dylan", "orange")` and `r colorize("Katy", "skyblue")` were arrested the same day!
 
-- 2 years for drug
+- 2 years for drugs
 
 - If confess, 1 year and the other 10 years
 
-- If deny, 10 year and the other 1 years
+- If deny, 10 years and the other 1 year
 
 - If both confess, both get 3 years
 
@@ -375,11 +375,11 @@ text(x = 0.25, y = 1.25, "1", col = "skyblue", font = 2, cex = 3)
 
 `r colorize("Dylan", "orange")` and `r colorize("Katy", "skyblue")` were arrested the same day!
 
-- 2 years for drug
+- 2 years for drugs
 
 - If confess, 1 year and the other 10 years
 
-- If deny, 10 year and the other 1 years
+- If deny, 10 years and the other 1 year
 
 - If both confess, both get 3 years
 
@@ -427,11 +427,11 @@ text(x = -0.75, y = 0.25, "10", col = "skyblue", font = 2, cex = 3)
 
 `r colorize("Dylan", "orange")` and `r colorize("Katy", "skyblue")` were arrested the same day!
 
-- 2 years for drug
+- 2 years for drugs
 
 - If confess, 1 year and the other 10 years
 
-- If deny, 10 year and the other 1 years
+- If deny, 10 years and the other 1 year
 
 - If both confess, both get 3 years
 
@@ -481,11 +481,11 @@ text(x = 0.25, y = 0.25, "2", col = "skyblue", font = 2, cex = 3)
 
 `r colorize("Dylan", "orange")` and `r colorize("Katy", "skyblue")` were arrested the same day!
 
-- 2 years for drug
+- 2 years for drugs
 
 - If confess, 1 year and the other 10 years
 
-- If deny, 10 year and the other 1 years
+- If deny, 10 years and the other 1 year
 
 - If both confess, both get 3 years
 
