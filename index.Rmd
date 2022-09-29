@@ -822,7 +822,7 @@ text(x = 0.5, y = 0.5, "(V/2) - c = 15", cex = 2)
 
 ```
 
-- The fitness of individuals in lower at equilibrium than in all dove population
+- The fitness of individuals is lower at equilibrium than in all dove population
 
 - Individual selection > group selection
 
