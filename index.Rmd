@@ -685,29 +685,6 @@ The best strategy dependes on the frequency of other strategies
 
 ---
 
-# What is the best strategy? `r colorize("Hawk", "orange")` or `r colorize("Dove", "skyblue")`?
-
-
-```{r echo = FALSE, out.width = "55%"}
-
-plot(seq(0, 2, by = 1) ~ seq(-1, 1, by = 1), type = "n", xaxt = "n", yaxt = "n", ylab = "", xlab = "", mar = c(5, 8, 1, 0))
-box(lwd = 3)
-segments(0, -1, 0, 2.5, lwd = 1.5)
-segments(-2, 1, 2, 1, lwd = 1.5)
-mtext(text = "Hawk", side = 2, at = 1.5, line = 2, cex = 2, col = "orange", font = 2)
-mtext(text = "Dove", side = 2, at = 0.5, line = 2, cex = 2, col = "skyblue", font = 2)
-mtext(text = "Hawk", side = 3, at = -0.5, line = 2, cex = 2, col = "orange", font = 2)
-mtext(text = "Dove", side = 3, at = 0.5, line = 2, cex = 2, col = "skyblue", font = 2)
-
-text(x = -0.5, y = 1.5, "(V + [-C])/2 = -25", cex = 2)
-text(x = 0.5, y = 1.5, "V = 50", cex = 2)
-text(x = -0.5, y = 0.5, "0", cex = 2)
-text(x = 0.5, y = 0.5, "(V/2) - c = 15", cex = 2)
-
-```
-
----
-
 # Modeling the dynamic of the population
 
 .pull-left[
