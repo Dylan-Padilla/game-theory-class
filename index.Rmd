@@ -691,7 +691,7 @@ The best strategy dependes on the frequency of other strategies
 
 ```{r echo = FALSE, out.width = "90%"}
 
-plot(seq(-50, 50, by = 20) ~ seq(0, 1, by = 0.2), type = "n", ylab = "Average payoff (fitness)", xlab = "Hawk frequency")
+plot(seq(-50, 50, by = 20) ~ seq(0, 1, by = 0.2), type = "n", ylab = "Average payoff (fitness)", xlab = "Hawk frequency", las = 1)
 box(lwd = 3)
 segments(0, 50, 1, -25, lwd = 3, col = "orange")
 segments(0, 15, 1, 0, lwd = 3, col = "skyblue")
@@ -740,7 +740,7 @@ text(x = 0.5, y = 0.5, "(V/2) - c = 15", cex = 2)
 
 ```{r echo = FALSE, out.width = "90%"}
 
-plot(seq(-50, 50, by = 20) ~ seq(0, 1, by = 0.2), type = "n", ylab = "Average payoff (fitness)", xlab = "Hawk frequency")
+plot(seq(-50, 50, by = 20) ~ seq(0, 1, by = 0.2), type = "n", ylab = "Average payoff (fitness)", xlab = "Hawk frequency", las = 1)
 box(lwd = 3)
 segments(0, 50, 1, -25, lwd = 3, col = "orange")
 segments(0, 15, 1, 0, lwd = 3, col = "skyblue")
@@ -790,7 +790,7 @@ text(x = 0.5, y = 0.5, "(V/2) - c = 15", cex = 2)
 
 ```{r echo = FALSE, out.width = "90%"}
 
-plot(seq(-50, 50, by = 20) ~ seq(0, 1, by = 0.2), type = "n", ylab = "Average payoff (fitness)", xlab = "Hawk frequency")
+plot(seq(-50, 50, by = 20) ~ seq(0, 1, by = 0.2), type = "n", ylab = "Average payoff (fitness)", xlab = "Hawk frequency", las = 1)
 box(lwd = 3)
 segments(0, 50, 1, -25, lwd = 3, col = "orange")
 segments(0, 15, 1, 0, lwd = 3, col = "skyblue")
