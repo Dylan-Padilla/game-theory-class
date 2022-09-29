@@ -556,10 +556,10 @@ text(x = 0.25, y = 0.25, "2", col = "skyblue", font = 2, cex = 3)
 
 Payoffs:
 
-- get resources: +50
+- get resources: 50
 - lose resources: 0
-- lose fight (injury): -100
-- cost of dove display: -10
+- lose fight (injury): 100
+- cost of dove display: 10
 
 ]
 
@@ -574,9 +574,9 @@ Payoffs:
 
 $V=50$
 
-$C=-100$
+$C=100$
 
-$c=-10$
+$c=10$
 
 <br>
 
