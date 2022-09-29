@@ -225,7 +225,7 @@ Evolutionary game theory focuses more on dynamics of strategy change. Influenced
 
 ---
 
-# The prisioner's dilemma
+# The prisoner's dilemma
 
 
 .pull-left[
@@ -270,7 +270,7 @@ mtext(text = "Deny", side = 3, at = 0.5, line = 2, cex = 2, col = "orange", font
 
 ---
 
-# The prisioner's dilemma
+# The prisoner's dilemma
 
 
 .pull-left[
@@ -318,7 +318,7 @@ text(x = -0.75, y = 1.25, "3", col = "skyblue", font = 2, cex = 3)
 
 ---
 
-# The prisioner's dilemma
+# The prisoner's dilemma
 
 
 .pull-left[
@@ -368,7 +368,7 @@ text(x = 0.25, y = 1.25, "1", col = "skyblue", font = 2, cex = 3)
 
 ---
 
-# The prisioner's dilemma
+# The prisoner's dilemma
 
 
 .pull-left[
@@ -420,7 +420,7 @@ text(x = -0.75, y = 0.25, "10", col = "skyblue", font = 2, cex = 3)
 
 ---
 
-# The prisioner's dilemma
+# The prisoner's dilemma
 
 
 .pull-left[
@@ -474,7 +474,7 @@ text(x = 0.25, y = 0.25, "2", col = "skyblue", font = 2, cex = 3)
 
 ---
 
-# The prisioner's dilemma
+# The prisoner's dilemma
 
 
 .pull-left[
