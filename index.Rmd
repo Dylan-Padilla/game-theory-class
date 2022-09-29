@@ -671,7 +671,7 @@ The best strategy dependes on the frequency of other strategies
 
 `r colorize("Hawks", "orange")`:
 
-- Better than doves when may doves
+- Better than doves when many doves
 - Worse than doves when many hawks
 
 `r colorize("Doves", "skyblue")`:
