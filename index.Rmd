@@ -685,7 +685,7 @@ The best strategy dependes on the frequency of other strategies
 
 ---
 
-# Modeling the dynamic of the population
+# Modeling the dynamics of the population
 
 .pull-left[
 
@@ -734,7 +734,7 @@ text(x = 0.5, y = 0.5, "(V/2) - c = 15", cex = 2)
 
 ---
 
-# Modeling the dynamic of the population
+# Modeling the dynamics of the population
 
 .pull-left[
 
@@ -784,7 +784,7 @@ text(x = 0.5, y = 0.5, "(V/2) - c = 15", cex = 2)
 
 ---
 
-# Modeling the dynamic of the population
+# Modeling the dynamics of the population
 
 .pull-left[
 
